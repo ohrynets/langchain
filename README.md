@@ -16,6 +16,6 @@ The key technologies planned for use in this project include:
 
 ## Cost Considerations
 
-Currently, the project utilizes Chat GPT which incurs a cost of approximately $0.003 per call. As a potential cost-saving measure, we might consider switching to a locally hosted language model in the future, subject to the project's requirements and budget.
+Currently, the project utilizes Chat GPT which incurs a cost of approximately $0.004 per call. As a potential cost-saving measure, we might consider switching to a locally hosted language model in the future, subject to the project's requirements and budget.
 
 *Please note that the links provided above are placeholders and you will need to replace them with the correct URLs related to each library or tool.*
