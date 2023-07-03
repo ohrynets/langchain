@@ -10,7 +10,7 @@ In the pursuit of this goal, we will utilize various tools to ensure a streamlin
 
 The key technologies planned for use in this project include:
 
-1. **Langchain**: This tool will be vital in chaining the extraction process and converting unstructured data into a more structured form. Find out more about Langchain [here](https://www.langchain.com).
+1. **Langchain**: This tool will be vital in chaining the extraction process and converting unstructured data into a more structured form. Find out more about Langchain [here](https://python.langchain.com/docs/get_started/introduction.html).
 2. **Guardrails AI**: This technology ensures that the output format and content generated are accurate and reliable. Learn more about Guardrails AI [here](https://shreyar.github.io/guardrails/).
 3. **NetworkX**: This Python library will be used to convert the extracted information into a graphical form, providing a clear, intuitive visual representation of our data. You can find more information about NetworkX [here](https://networkx.org/).
 
