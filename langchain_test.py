@@ -1,18 +1,13 @@
 # Read configuration file
 import json
-from langchain import PromptTemplate
 from langchain.llms import OpenAI
 from langchain.chat_models import ChatOpenAI
 from langchain.callbacks import get_openai_callback
 from langchain.prompts.chat import HumanMessagePromptTemplate
 
-from langchain.schema import (
-    AIMessage,
-    HumanMessage,
-    SystemMessage
-)
+from langchain.schema import HumanMessage
 
-#Open environment file
+# Open environment file
 with open('env.json') as json_file:
     data = json.load(json_file)
     openai_api_key = data['openai_api_key']
@@ -23,16 +18,17 @@ with open('env.json') as json_file:
 # This is a simple skeleton for a language chain
 
 with get_openai_callback() as cb:
-    llm = OpenAI(openai_api_key = openai_api_key, temperature = temperature )
+    llm = OpenAI(openai_api_key=openai_api_key, temperature=temperature)
     result = llm.predict("What would be a good company name for a company that makes colorful socks?")
     print(result)
     print(cb)
 
 
-##Lang chain prompt template
-#This is a simple skeleton for a language chain
+# Lang chain prompt template
+# This is a simple skeleton for a language chain
 template = """/
-Please extract the technical and soft skills from the following job description in list formed in JSON:
+Please extract the technical and soft skills from the following job \
+description in list formed in JSON:
 {job_description}
 """
 
@@ -91,7 +87,7 @@ Testing: Component/ Integration Testing / Reconciliation.
 
 hm = HumanMessagePromptTemplate.from_template(template)
 with get_openai_callback() as cb:
-    chat = ChatOpenAI(openai_api_key = openai_api_key, temperature=temperature)
-    result =  chat.predict_messages([hm.format(job_description=job_description)])
+    chat = ChatOpenAI(openai_api_key=openai_api_key, temperature=temperature)
+    result = chat.predict_messages([hm.format(job_description=job_description)])
     print(result.content)
     print(cb)
